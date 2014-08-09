@@ -6,7 +6,7 @@ plot4 <- function() {
   slimFrame$NewDate <- as.Date(slimFrame$Date,format="%d/%m/%Y")
   slimFrame$DateTime <- strptime(paste(slimFrame$Date,slimFrame$Time), "%d/%m/%Y %H:%M:%S")
   
-  png(filename = "Plot4.png", bg="transparent", width=480, height=480)
+  png(filename = "Plot4.png", bg="white", width=480, height=480)
   par(mfrow=c(2,2))
   plot(slimFrame$DateTime,as.numeric(slimFrame$Global_active_power),type="l",cex.axis=1.1,cex.lab=1.1,ylab = "Global Active Power",xlab="")
   plot(slimFrame$DateTime,as.numeric(slimFrame$Voltage),type="l",cex.axis=1.1,cex.lab=1.1,ylab = "Voltage",xlab="datetime")

@@ -6,7 +6,7 @@ plot3 <- function() {
   slimFrame$NewDate <- as.Date(slimFrame$Date,format="%d/%m/%Y")
   slimFrame$DateTime <- strptime(paste(slimFrame$Date,slimFrame$Time), "%d/%m/%Y %H:%M:%S")
   
-  png(filename = "Plot3.png", bg="transparent", width=480, height=480)
+  png(filename = "Plot3.png", bg="white", width=480, height=480)
   plot(slimFrame$DateTime,as.numeric(slimFrame$Sub_metering_1),type="l",cex.axis=1,cex.lab=1,ylab = "Energy sub metering",xlab="",col="black")
   lines(slimFrame$DateTime,as.numeric(slimFrame$Sub_metering_2),type="l",col="red")
   lines(slimFrame$DateTime,as.numeric(slimFrame$Sub_metering_3),type="l", col="blue")
