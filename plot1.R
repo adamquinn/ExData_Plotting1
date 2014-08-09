@@ -5,6 +5,6 @@
    
 
    png(filename = "Plot1.png", bg="white", width=480, height=480)
-   hist(as.numeric(slimFrame$Global_active_power),bg="green",cex.axis=1,cex.lab=1,cex.main=1.2,font.main=2,col="red", main ="Global Active Power", xlab = "Global Active Power (kilowatts)")
+   hist(as.numeric(slimFrame$Global_active_power),cex.axis=1,cex.lab=1,cex.main=1.2,font.main=2,col="red", main ="Global Active Power", xlab = "Global Active Power (kilowatts)")
    dev.off()  
  }
